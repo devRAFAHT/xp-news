@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Ícone do site -->
+    <link rel="icon" href="/assets/icons/faviconxp.jpg" type="image/jpg">
+    <meta charset="UTF-8">
+    <!-- Configuração da viewport para responsividade -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3</title>
+</head>
+<body>
+
+    <!-- Cabeçalho da página -->
+    <header>
+        <h1>Lista de Jogos</h1>
+    </header>
+
+    <!-- Seção para Jogos Favoritos -->
+    <section>
+        <h2>Jogos Favoritos</h2>
+        <ul>
+            <li><abbr title="Grand Theft Auto">GTA</abbr>
+                <ul>
+                    <li><abbr title="Grand Theft Auto San Andreas">GTA San Andreas</abbr></li>
+                    <li><abbr title="Grand Theft Auto V">GTA V</abbr></li>
+                </ul>
+            </li>
+            <li>Shadow of the Colossus</li>
+            <li>God of War 2</li>
+            <li>Metal Gear Solid 3</li>
+        </ul>
+    </section>
+
+    <!-- Seção para Jogos Mais Vendidos -->
+    <section>
+        <h2>Jogos Mais Vendidos</h2>
+        <ol>
+            <li><abbr title="GTA V">Grand Theft Auto V</abbr></li>
+            <li>Minecraft</li>
+            <li>Fortnite</li>
+        </ol>
+    </section>
+
+    <!-- Seção para a Imagem do Jogo Red Dead -->
+    <section>
+        <h2>Red Dead Redemption 2</h2>
+        <picture>
+            <!-- Imagem para dispositivos móveis -->
+            <source media="(max-width: 1279px)" srcset="/assets/images/red-dead-mobile.png" alt="Banner Red Dead Redemption 2">
+            <!-- Imagem para dispositivos PC -->
+            <source media="(min-width: 1280px) and (max-width: 3839px)" srcset="/assets/images/red-dead-pc.png" alt="Banner Red Dead Redemption 2">
+            <!-- Imagem para TVs -->
+            <source media="(min-width: 3840px)" srcset="/assets/images/red-dead-tv.png" alt="Banner Red Dead Redemption 2">
+            <!-- Imagem padrão (fallback) -->
+            <img src="/assets/images/red-dead-pc.png" alt="Banner Red Dead Redemption 2" class="red-dead-image"> <!-- Imagem padrão -->
+        </picture>
+    </section>
+
+    <!-- Aviso -->
+    <section>
+        <h2>Atenção Jonatas</h2>
+        <p>Não encontrei a imagem em diferentes tamanhos. Se fosse para ficar do tamanho certinho da tela de um celular, teria que cortar demais, mas está trocando de imagem de acordo com o dispositivo.</p>
+    </section>
+
+</body>
+</html>
