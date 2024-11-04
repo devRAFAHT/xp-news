@@ -1,3 +1,136 @@
+/* Definição das cores do site */
+:root {
+    --rosa-claro: rgb(248, 7, 89);
+    --rosa-escuro: rgb(170, 9, 63);
+    --cinza-escuro: rgb(14, 14, 14);
+    --branco: rgb(255, 255, 255);
+}
+
+/* Estilos gerais do corpo da página */
+body {
+    background-color: var(--cinza-escuro);
+    color: var(--branco);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para a faixa de menu */
+.menu {
+    background-color: var(--rosa-escuro);
+    padding: 20px; /* Espaçamento interno da faixa de menu */
+    display: flex; 
+    flex-direction: column; /* Coluna em telas pequenas para melhor legibilidade */
+    align-items: center; 
+    justify-content: center; 
+    width: 100%;
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+}
+
+/* Estilos para a navegação */
+nav {
+    display: flex; /* Flexbox para organizar os itens horizontalmente */
+    justify-content: center; /* Centraliza os links na navegação */
+    margin: 20px 0; /* Espaçamento acima e abaixo da navegação */
+}
+
 nav a {
-    margin-right: 10px; /* Adiciona 10px de margem à direita de cada link */
+    margin: 0 15px; /* Espaçamento entre os links de navegação */
+    color: var(--branco); /* Cor dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+nav a:hover {
+    color: var(--rosa-claro); /* Cor dos links ao passar o mouse */
+}
+
+/* Estilo para o título principal */
+h1 {
+    color: var(--rosa-escuro);
+    text-align: center;
+    margin-top: 20px; /* Espaçamento acima do título */
+}
+
+/* Estilo para os títulos secundários */
+h2 {
+    color: var(--rosa-escuro);
+    text-align: center;
+    margin-top: 20px; /* Espaçamento acima dos subtítulos */
+}
+
+/* Estilos gerais para links */
+a {
+    color: var(--branco); /* Cor padrão dos links */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+a:hover {
+    color: var(--rosa-escuro); /* Cor dos links ao passar o mouse */
+}
+
+/* Estilos para o player de áudio */
+audio {
+    display: block;
+    margin: 20px auto; /* Centraliza o player com espaçamento em cima e embaixo */
+    width: 50%; /* Largura do player em relação ao contêiner */
+    max-width: 400px; /* Limite máximo de largura do player */
+    background-color: var(--cinza-escuro); /* Cor de fundo do player */
+}
+
+/* Estilos para o iframe do vídeo */
+iframe {
+    display: block;
+    margin: 20px auto; /* Centraliza o iframe com espaçamento em cima e embaixo */
+    width: 100%; /* Largura total do contêiner */
+    max-width: 560px; /* Limite máximo de largura do vídeo */
+}
+
+/* Estilos para as seções do site */
+section {
+    text-align: center; /* Centraliza o texto dentro da seção */
+    margin: 30px auto; /* Espaçamento acima e abaixo da seção */
+    padding: 20px; /* Espaçamento interno da seção */
+    max-width: 98%; /* Largura máxima em relação ao contêiner */
+    border: 1px solid var(--rosa-escuro); /* Borda ao redor da seção */
+    border-radius: 8px; /* Arredondamento dos cantos da seção */
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+}
+
+/* Estilos para imagens dentro das seções */
+section img {
+    max-width: 100%; /* Imagem responsiva para se ajustar ao contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 5px; /* Arredondamento dos cantos da imagem */
+}
+
+/* Estilos para o rodapé */
+.footer {
+    background-color: var(--rosa-escuro);
+    color: var(--branco);
+    text-align: center; /* Centraliza o texto do rodapé */
+    padding: 20px 0; /* Espaçamento interno do rodapé */
+    position: relative; 
+    bottom: 0;
+    width: 100%; /* Largura total do rodapé */
+}
+
+.back-to-top {
+    color: var(--branco); /* Cor do link para voltar ao topo */
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 16px; /* Tamanho da fonte do link */
+}
+
+.back-to-top:hover {
+    color: var(--rosa-claro); /* Cor do link ao passar o mouse */
+}
+
+/* Media Queries para melhorar a responsividade */
+@media (min-width: 600px) {
+    .menu {
+        flex-direction: row; /* Muda a direção para linha em telas maiores */
+    }
+
+    .menu nav a {
+        font-size: 20px; /* Aumenta o tamanho da fonte dos links em telas maiores */
+    }
 }

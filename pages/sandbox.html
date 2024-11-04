@@ -1,26 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a responsividade da página -->
-    <title>SandBox</title> <!-- Título que aparece na aba do navegador -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SandBox</title>
+    <link rel="stylesheet" href="../css/styles.css"> <!-- Estilo da página -->
 </head>
 <body>
 
-    <h1>Página SandBox</h1> <!-- Título principal da página -->
+    <!-- Menu de navegação principal -->
+    <div class="menu">
+        <h2>Menu</h2>
+        <nav>
+            <a href="#ouvir">Ouvir Música</a>
+            <a href="#trailer">Assistir Trailer</a>
+            <a href="#paleta">Paleta de Cores</a>
+        </nav>
+    </div>
 
-    <h2>Ouvir The House of the Rising Sun</h2> <!-- Título da seção de áudio -->
+    <!-- Seção para ouvir uma música -->
+    <section id="ouvir">
+        <h2>Ouvir The House of the Rising Sun</h2>
+        <audio preload="metadata" controls loop>
+            <source src="../audio/charlestaylor-the-house-of-rising-sun.mp3" type="audio/mpeg">
+            <p>Seu navegador não suporta áudio. 
+                <a href="../audio/charlestaylor-the-house-of-rising-sun.mp3" download="charlestaylor-the-house-of-rising-sun">Clique aqui para baixar.</a>
+            </p>
+        </audio>
+    </section>
 
-    <audio preload="metadata" controls loop> <!-- Player de áudio com opções de controle -->
-        <source src="../audio/charlestaylor-the-house-of-rising-sun.mp3" type="audio/mpeg"> <!-- Fonte do áudio -->
-        <p>Seu navegador não suporta áudio. 
-            <a href="../audio/charlestaylor-the-house-of-rising-sun.mp3" download="charlestaylor-the-house-of-rising-sun">Clique aqui para baixar.</a> <!-- Link para download do áudio -->
-        </p>
-    </audio>
+    <!-- Seção para assistir ao trailer do GTA 6 -->
+    <section id="trailer">
+        <h2>Assistir ao trailer do GTA 6</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/QdBZY2fkU-0?si=ZkJb_IXubDDIjjZZ" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    </section>
 
-    <h2>Assistir ao trailer do GTA 6</h2> <!-- Título da seção do vídeo -->
+    <!-- Seção exibindo a paleta de cores do site -->
+    <section id="paleta">
+        <h2>Paleta de Cores do Site</h2>
+        <img src="../assets/images/paleta.png" alt="Paleta de cores do site">
+    </section>
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/QdBZY2fkU-0?si=ZkJb_IXubDDIjjZZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> <!-- Iframe para incorporar o vídeo do YouTube -->
+    <!-- Rodapé com link para voltar ao topo -->
+    <footer class="footer">
+        <a href="#top" class="back-to-top">Voltar ao Topo</a>
+    </footer>
 
 </body>
 </html>
