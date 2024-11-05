@@ -9,6 +9,10 @@
 /* Estilos gerais do corpo da página */
 body {
     background-color: var(--cinza-escuro);
+    background-image: linear-gradient(rgba(14, 14, 14, 0.9), rgba(14, 14, 14, 1)), url("../assets/images/red-dead-tv-p&b.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: var(--branco);
     font-family: Arial, sans-serif;
     margin: 0;
