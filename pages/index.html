@@ -10,23 +10,140 @@
 
     <!-- Link para o CSS externo -->
     <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- FontAwesome para ícones -->
+    <script src="https://kit.fontawesome.com/a3668444f2.js" crossorigin="anonymous"></script>
+
+     <!-- Link para o Google Fonts para Roboto -->
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <!-- Cabeçalho principal da página -->
+    
+    <!-- Cabeçalho com logo e menu -->
     <header>
-        <h1>Hello, world!</h1>
+        <div class="container">
+            <!-- Logo do site -->
+            <nav class="logo">
+                <img src="../assets/images/icone-principal-cortada.PNG" alt="Logo XP News">
+            </nav>
+            <!-- Menu de navegação principal -->
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="#">Sessão 1</a></li>
+                        <li><a href="#">Sessão 2</a></li>    
+                        <li><a href="#">Sessão 3</a></li>
+                        <!-- Link para a página de atividades que abrirá em nova guia -->
+                        <li><a href="links.html" target="_blank">Atividades</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Botão de login -->
+            <div class="login">
+                <button><i class="fa-solid fa-right-to-bracket"></i></button>
+            </div>
+        </div>
     </header>
 
-    <!-- Navegação para outras páginas -->
-    <nav>
-        <!-- Link para abrir atividade-3.html em uma nova aba -->
-        <a href="atividade-3.html" target="_blank" rel="noopener noreferrer" lang="pt" title="Ir para a atividade 3 em português">Atividade 3</a>
-        <!-- Link para abrir sandbox.html em uma nova aba -->
-        <a href="sandbox.html" target="_blank" rel="noopener noreferrer" lang="pt" title="Ir para sandbox em português">SandBox</a>
-    </nav>
+    <!-- Corpo principal da página -->
+    <main>
+        <!-- Seção de notícias -->
+        <section class="noticias">
+            <h2>Últimas Notícias</h2>
+            <div class="noticias-container">
+                <!-- Notícia 1 -->
+                <div class="noticia">
+                    <h3>Notícia 1</h3>
+                    <p>Resumo da notícia...</p>
+                </div>
+                <!-- Notícia 2 -->
+                <div class="noticia">
+                    <h3>Notícia 2</h3>
+                    <p>Resumo da notícia...</p>
+                </div>
+                <!-- Notícia 3 -->
+                <div class="noticia">
+                    <h3>Notícia 3</h3>
+                    <p>Resumo da notícia...</p>
+                </div>
+                <!-- Notícia 4 -->
+                <div class="noticia">
+                    <h3>Notícia 4</h3>
+                    <p>Resumo da notícia...</p>
+                </div>
+                <!-- Notícia 5 -->
+                <div class="noticia">
+                    <h3>Notícia 5</h3>
+                    <p>Resumo da notícia...</p>
+                </div>
+                <!-- Notícia 6 -->
+                <div class="noticia">
+                    <h3>Notícia 6</h3>
+                    <p>Resumo da notícia...</p>
+                </div>
+            </div>
+            <!-- Botões de navegação para rolar as notícias -->
+            <button class="scroll-left">&#10094;</button>
+            <button class="scroll-right">&#10095;</button>
+        </section>
 
-    <!-- Mensagem informativa -->
-    <p style="text-align: center; margin-top: 20px;">A interface da página principal ainda não foi definida.</p>
+        <!-- Seção de jogos em destaque -->
+        <section class="noticias">
+            <h2>Próximos lançamentos</h2>
+            <div class="noticias-container">
+                <!-- Jogo Destaque 1 -->
+                <div class="noticia">
+                    <h3>Jogo Destaque 1</h3>
+                    <p>Resumo do jogo...</p>
+                </div>
+                <!-- Jogo Destaque 2 -->
+                <div class="noticia">
+                    <h3>Jogo Destaque 2</h3>
+                    <p>Resumo do jogo...</p>
+                </div>
+                <!-- Jogo Destaque 3 -->
+                <div class="noticia">
+                    <h3>Jogo Destaque 3</h3>
+                    <p>Resumo do jogo...</p>
+                </div>
+                <!-- Jogo Destaque 4 -->
+                <div class="noticia">
+                    <h3>Jogo Destaque 4</h3>
+                    <p>Resumo do jogo...</p>
+                </div>
+                <!-- Jogo Destaque 5 -->
+                <div class="noticia">
+                    <h3>Jogo Destaque 5</h3>
+                    <p>Resumo do jogo...</p>
+                </div>
+                <!-- Jogo Destaque 6 -->
+                <div class="noticia">
+                    <h3>Jogo Destaque 6</h3>
+                    <p>Resumo do jogo...</p>
+                </div>
+            </div>
+            <!-- Botões de navegação para rolar os jogos -->
+            <button class="scroll-left">&#10094;</button>
+            <button class="scroll-right">&#10095;</button>
+        </section>
+
+    </main>
+
+    <!-- Rodapé com links adicionais -->
+    <footer>
+        <p>&copy; 2024 XP News</p>
+        <nav>
+            <ul>
+                <!-- Links de navegação do rodapé -->
+                <li><a href="#">Sobre nós</a></li>
+                <li><a href="#">Política de Privacidade</a></li>
+                <li><a href="#">Termos de Uso</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </footer>
+    
 
 </body>
 </html>

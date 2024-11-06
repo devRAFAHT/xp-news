@@ -1,140 +1,297 @@
 /* Definição das cores do site */
 :root {
-    --rosa-claro: rgb(248, 7, 89);
-    --rosa-escuro: rgb(170, 9, 63);
-    --cinza-escuro: rgb(14, 14, 14);
-    --branco: rgb(255, 255, 255);
+    --rosa-claro: rgb(248, 7, 89);  /* Cor rosa clara */
+    --rosa-escuro: rgb(170, 9, 63); /* Cor rosa escura */
+    --cinza-escuro: rgb(14, 14, 14); /* Cor cinza escura para fundo */
+    --cinza-claro: rgb(100, 100, 100); /* Cor cinza clara */
+    --branco: rgb(255, 255, 255); /* Cor branca */
 }
 
-/* Estilos gerais do corpo da página */
-body {
-    background-color: var(--cinza-escuro);
-    background-image: linear-gradient(rgba(14, 14, 14, 0.9), rgba(14, 14, 14, 1)), url("../assets/images/red-dead-tv-p&b.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: var(--branco);
-    font-family: Arial, sans-serif;
+/* Reset de margens, padding e box-sizing para todos os elementos */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* Estilos para a faixa de menu */
-.menu {
-    background-color: var(--rosa-escuro);
-    padding: 20px; /* Espaçamento interno da faixa de menu */
-    display: flex; 
-    flex-direction: column; /* Coluna em telas pequenas para melhor legibilidade */
-    align-items: center; 
-    justify-content: center; 
+body {
+    background-color: var(--cinza-escuro); /* Fundo escuro */
+    font-family: 'Roboto', sans-serif; /* Fonte padrão */
+}
+
+.container {
+    max-width: 1080px; /* Largura máxima do container */
+    margin: 0 auto; /* Centraliza o container */
+    display: flex;
+    align-items: center; /* Alinha itens verticalmente */
+    justify-content: space-between; /* Espaça os itens igualmente */
     width: 100%;
-    box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
 }
 
-/* Estilos para a navegação */
-nav {
-    display: flex; /* Flexbox para organizar os itens horizontalmente */
-    justify-content: center; /* Centraliza os links na navegação */
-    margin: 20px 0; /* Espaçamento acima e abaixo da navegação */
+header {
+    background-color: var(--cinza-escuro); /* Cor de fundo do header */
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between; /* Espaça os itens do header */
+    align-items: center;
 }
 
-nav a {
-    margin: 0 15px; /* Espaçamento entre os links de navegação */
+.logo {
+    margin-left: 20px; /* Distância do logo da borda esquerda */
+}
+
+.logo img {
+    width: 50px; /* Tamanho do logo */
+    height: auto;
+    cursor: pointer; /* Indicador de que o logo é clicável */
+}
+
+/* Ajuste o logo e login para não encolherem */
+.logo,
+.login {
+    flex-shrink: 0;
+}
+
+.menu {
+    display: flex;
+    justify-content: center; /* Alinha os itens do menu no centro */
+    flex-grow: 1;
+}
+
+.menu nav ul {
+    list-style-type: none; /* Remove a lista de marcadores */
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu nav ul li {
+    margin-right: 20px; /* Espaço entre os itens */
+    position: relative;
+}
+
+.menu nav a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: var(--cinza-claro); /* Cor dos links */
+    font-size: 18px;
+    position: relative;
+}
+
+/* Efeito visual para os links no hover */
+.menu nav a::after {
+    content: " ";
+    width: 0px; /* Inicia com a linha invisível */
+    height: 4px;
+    background-image: linear-gradient(45deg, var(--rosa-escuro), var(--rosa-claro)); /* Linha gradiente */
+    position: absolute;
+    top: 25px;
+    left: 0px;
+    transition: width 0.5s; /* Animação da linha */
+}
+
+.menu nav a:hover::after {
+    width: 100%; /* Linha se expandindo ao passar o mouse */
+}
+
+/* Estilo para o ícone de login */
+.login {
+    margin-right: 20px; /* Ajusta a margem conforme o espaçamento do logo */
+    margin-left: auto;
+    position: relative;
+    margin-right: 120px;
+}
+
+.login button {
+    color: var(--branco); /* Cor do texto do botão */
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background: linear-gradient(to bottom right, var(--rosa-claro), var(--rosa-escuro)); /* Gradiente no botão */
+    transition: background 0.3s ease; /* Transição de fundo */
+    cursor: pointer;
+}
+
+.login button:hover {
+    background: linear-gradient(to bottom right, var(--rosa-escuro), var(--rosa-claro)); /* Efeito de hover no botão */
+}
+
+.login button i {
+    font-size: 20px; /* Tamanho do ícone */
+}
+
+main {
+    padding: 20px; /* Espaçamento da área principal */
+}
+
+.noticias {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--branco); /* Cor do título */
+    padding-left: 60px; /* Distância à esquerda */
+}
+
+.noticias-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px; /* Espaço entre as notícias */
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 270px;
+    width: 100%;
+}
+
+.noticia {
+    background-color: var(--cinza-claro); /* Cor de fundo das notícias */
+    padding: 20px;
+    border-radius: 8px;
+    color: var(--cinza-escuro); /* Cor do texto */
+    width: 200px; /* Largura das notícias */
+    height: 250px; /* Altura das notícias */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease; /* Transição de zoom */
+}
+
+.noticia:hover {
+    transform: scale(1.05); /* Efeito de zoom nas notícias */
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Cor do fundo do botão */
+    color: var(--branco); /* Cor do texto do botão */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.scroll-left {
+    left: 10px; /* Posição do botão de scroll à esquerda */
+}
+
+.scroll-right {
+    right: 10px; /* Posição do botão de scroll à direita */
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Efeito de hover no botão */
+}
+
+footer {
+    background-color: rgb(16, 16, 16); /* Cor de fundo do rodapé */
+    color: var(--branco); /* Cor do texto */
+    text-align: center; /* Centraliza o conteúdo */
+    padding: 10px;
+}
+
+/* Responsividade para dispositivos menores */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    .menu nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .noticias-container {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .noticia {
+        width: 100%;
+        max-width: 300px; /* Limita o tamanho da notícia */
+    }
+
+    footer {
+        padding: 15px;
+        font-size: 14px; /* Ajusta o tamanho da fonte no rodapé */
+    }
+}
+
+/* Responsividade para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .menu nav ul li {
+        margin-right: 10px; /* Ajusta o espaçamento dos itens */
+    }
+
+    .noticia {
+        width: 45%;
+        height: auto; /* Ajusta a altura das notícias */
+    }
+}
+
+footer {
+    background-color: var(--cinza-escuro); /* Cor de fundo do rodapé */
+    color: var(--branco); /* Cor do texto */
+    text-align: center; /* Centraliza o conteúdo */
+    padding: 20px 0;
+}
+
+footer p {
+    margin-bottom: 20px; /* Adiciona espaço abaixo do texto "2024 XP News" */
+}
+
+footer nav ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0;
+    margin: 0;
+}
+
+footer nav ul li {
+    display: inline; /* Coloca os itens na mesma linha */
+    margin-right: 15px; /* Espaço entre os itens */
+}
+
+footer nav a {
     color: var(--branco); /* Cor dos links */
     text-decoration: none; /* Remove o sublinhado dos links */
+    font-size: 16px; /* Tamanho de fonte adequado */
 }
 
-nav a:hover {
+footer nav a:hover {
     color: var(--rosa-claro); /* Cor dos links ao passar o mouse */
 }
 
-/* Estilo para o título principal */
-h1 {
-    color: var(--rosa-escuro);
-    text-align: center;
-    margin-top: 20px; /* Espaçamento acima do título */
-}
-
-/* Estilo para os títulos secundários */
-h2 {
-    color: var(--rosa-escuro);
-    text-align: center;
-    margin-top: 20px; /* Espaçamento acima dos subtítulos */
-}
-
-/* Estilos gerais para links */
-a {
-    color: var(--branco); /* Cor padrão dos links */
-    text-decoration: none; /* Remove o sublinhado */
-}
-
-a:hover {
-    color: var(--rosa-escuro); /* Cor dos links ao passar o mouse */
-}
-
-/* Estilos para o player de áudio */
-audio {
-    display: block;
-    margin: 20px auto; /* Centraliza o player com espaçamento em cima e embaixo */
-    width: 50%; /* Largura do player em relação ao contêiner */
-    max-width: 400px; /* Limite máximo de largura do player */
-    background-color: var(--cinza-escuro); /* Cor de fundo do player */
-}
-
-/* Estilos para o iframe do vídeo */
-iframe {
-    display: block;
-    margin: 20px auto; /* Centraliza o iframe com espaçamento em cima e embaixo */
-    width: 100%; /* Largura total do contêiner */
-    max-width: 560px; /* Limite máximo de largura do vídeo */
-}
-
-/* Estilos para as seções do site */
-section {
-    text-align: center; /* Centraliza o texto dentro da seção */
-    margin: 30px auto; /* Espaçamento acima e abaixo da seção */
-    padding: 20px; /* Espaçamento interno da seção */
-    max-width: 98%; /* Largura máxima em relação ao contêiner */
-    border: 1px solid var(--rosa-escuro); /* Borda ao redor da seção */
-    border-radius: 8px; /* Arredondamento dos cantos da seção */
-    box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
-}
-
-/* Estilos para imagens dentro das seções */
-section img {
-    max-width: 100%; /* Imagem responsiva para se ajustar ao contêiner */
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 5px; /* Arredondamento dos cantos da imagem */
-}
-
-/* Estilos para o rodapé */
-.footer {
-    background-color: var(--rosa-escuro);
-    color: var(--branco);
-    text-align: center; /* Centraliza o texto do rodapé */
-    padding: 20px 0; /* Espaçamento interno do rodapé */
-    position: relative; 
-    bottom: 0;
-    width: 100%; /* Largura total do rodapé */
-}
-
-.back-to-top {
-    color: var(--branco); /* Cor do link para voltar ao topo */
-    text-decoration: none; /* Remove o sublinhado */
-    font-size: 16px; /* Tamanho da fonte do link */
-}
-
-.back-to-top:hover {
-    color: var(--rosa-claro); /* Cor do link ao passar o mouse */
-}
-
-/* Media Queries para melhorar a responsividade */
-@media (min-width: 600px) {
-    .menu {
-        flex-direction: row; /* Muda a direção para linha em telas maiores */
+/* Media Query para telas pequenas */
+@media (max-width: 600px) {
+    footer nav ul {
+        flex-direction: column; /* Alinha os links verticalmente em telas pequenas */
     }
 
-    .menu nav a {
-        font-size: 20px; /* Aumenta o tamanho da fonte dos links em telas maiores */
+    footer nav ul li {
+        margin-right: 0; /* Remove a margem direita em telas pequenas */
+        margin-bottom: 15px; /* Aumenta o espaço entre os links */
     }
 }
