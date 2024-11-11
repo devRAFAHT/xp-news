@@ -295,3 +295,98 @@ footer nav a:hover {
         margin-bottom: 15px; /* Aumenta o espaço entre os links */
     }
 }
+
+body.login-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cinza-escuro);
+    color: var(--branco);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo da Tela de Login */
+.login-container {
+    background-color: var(--cinza-escuro);
+    color: var(--branco);
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 400px;
+}
+
+.login-container h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: var(--branco);
+}
+
+.login-container label {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid var(--cinza-claro);
+    background-color: #2c2c2c;
+    color: var(--branco);
+    font-size: 16px;
+}
+
+.login-container .remember {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.login-container .remember label {
+    margin-left: 8px;
+    font-size: 14px;
+    color: var(--cinza-claro);
+}
+
+/* Ajustes para o botão de login */
+.btn-login {
+    width: 25%; 
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    background: linear-gradient(to bottom right, var(--rosa-claro), var(--rosa-escuro));
+    color: var(--branco);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: block; /* Garante que o botão seja um bloco */
+    margin: 0 auto; /* Centraliza o botão no container */
+    text-align: center;
+    margin-top: 90px;
+}
+
+
+.btn-login:hover {
+    background: linear-gradient(to bottom right, var(--rosa-escuro), var(--rosa-claro));
+}
+
+.register {
+    margin-top: 65px;
+    font-size: 14px;
+}
+
+.register a {
+    color: var(--rosa-claro);
+    text-decoration: none;
+}
+
+.register a:hover {
+    color: var(--rosa-escuro);
+}
