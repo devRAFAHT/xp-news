@@ -296,97 +296,240 @@ footer nav a:hover {
     }
 }
 
-body.login-page{
+body.login-page {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--cinza-escuro);
-    color: var(--branco);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    background-color: var(--cinza-escuro); /* Define o fundo da página de login */
+    color: var(--branco); /* Define a cor do texto */
 }
 
-/* Estilo da Tela de Login */
+/* Container da tela de login com estilização e centralização */
 .login-container {
-    background-color: var(--cinza-escuro);
-    color: var(--branco);
-    max-width: 400px;
-    margin: 100px auto;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    width: 400px;
+    background-color: var(--cinza-escuro); /* Fundo do container de login */
+    color: var(--branco); /* Cor do texto no container */
+    max-width: 400px; /* Define a largura máxima do container */
+    margin: 100px auto; /* Centraliza vertical e horizontalmente */
+    padding: 30px; /* Espaçamento interno */
+    border-radius: 8px; /* Arredondamento das bordas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Efeito de sombra */
+    text-align: center; /* Centraliza o texto */
+    width: 400px; /* Largura fixa do container */
 }
 
 .login-container h1 {
-    font-size: 32px;
-    margin-bottom: 20px;
+    font-size: 32px; /* Tamanho do título */
+    margin-bottom: 20px; /* Espaçamento inferior do título */
     color: var(--branco);
 }
 
 .login-container label {
     display: block;
-    text-align: left;
-    font-size: 14px;
-    margin-bottom: 5px;
+    text-align: left; /* Alinha os rótulos à esquerda */
+    font-size: 14px; /* Tamanho do texto dos rótulos */
+    margin-bottom: 5px; /* Espaçamento inferior */
 }
 
+/* Estilos dos campos de entrada de e-mail e senha */
 .login-container input[type="email"],
 .login-container input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 4px;
-    border: 1px solid var(--cinza-claro);
-    background-color: #2c2c2c;
-    color: var(--branco);
-    font-size: 16px;
+    width: 100%; /* Largura completa do campo */
+    padding: 10px; /* Espaçamento interno */
+    margin-bottom: 15px; /* Espaçamento inferior entre os campos */
+    border-radius: 4px; /* Bordas arredondadas */
+    border: 1px solid var(--cinza-claro); /* Borda leve */
+    background-color: #2c2c2c; /* Fundo do campo */
+    color: var(--branco); /* Cor do texto */
+    font-size: 16px; /* Tamanho do texto nos campos */
 }
 
 .login-container .remember {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+    display: flex; /* Exibe os elementos em linha */
+    align-items: center; /* Alinha os itens verticalmente */
+    margin-bottom: 20px; /* Espaçamento inferior */
 }
 
 .login-container .remember label {
-    margin-left: 8px;
+    margin-left: 8px; /* Espaçamento entre o checkbox e o texto */
     font-size: 14px;
-    color: var(--cinza-claro);
+    color: var(--cinza-claro); /* Cor do texto auxiliar */
 }
 
-/* Ajustes para o botão de login */
+/* Estilização do botão de login */
 .btn-login {
-    width: 25%; 
-    padding: 12px;
-    border: none;
-    border-radius: 4px;
-    background: linear-gradient(to bottom right, var(--rosa-claro), var(--rosa-escuro));
-    color: var(--branco);
+    width: 25%; /* Define a largura do botão */
+    padding: 12px; /* Espaçamento interno do botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 4px; /* Bordas arredondadas */
+    background: linear-gradient(to bottom right, var(--rosa-claro), var(--rosa-escuro)); /* Fundo com gradiente */
+    color: var(--branco); /* Cor do texto */
     font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    display: block; /* Garante que o botão seja um bloco */
-    margin: 0 auto; /* Centraliza o botão no container */
+    cursor: pointer; /* Aparece como botão clicável */
+    transition: background 0.3s ease; /* Animação suave no hover */
+    display: block; /* Exibe o botão como bloco */
+    margin: 0 auto; /* Centraliza o botão */
     text-align: center;
-    margin-top: 90px;
+    margin-top: 90px; /* Espaçamento superior do botão */
 }
-
 
 .btn-login:hover {
-    background: linear-gradient(to bottom right, var(--rosa-escuro), var(--rosa-claro));
+    background: linear-gradient(to bottom right, var(--rosa-escuro), var(--rosa-claro)); /* Inverte as cores no hover */
 }
 
+/* Texto com link para registro abaixo do botão de login */
 .register {
-    margin-top: 65px;
-    font-size: 14px;
+    margin-top: 65px; /* Espaçamento acima do texto */
+    font-size: 14px; /* Tamanho do texto */
 }
 
 .register a {
-    color: var(--rosa-claro);
-    text-decoration: none;
+    color: var(--rosa-claro); /* Cor do link */
+    text-decoration: none; /* Remove o sublinhado */
 }
 
 .register a:hover {
-    color: var(--rosa-escuro);
+    color: var(--rosa-escuro); /* Altera a cor do link no hover */
+}
+
+/* Ajustes para telas menores (responsivo) */
+@media (max-width: 600px) {
+    .login-container {
+        padding: 20px; /* Reduz o espaçamento interno no mobile */
+    }
+    
+    .login-container h1 {
+        font-size: 20px; /* Reduz o tamanho do título no mobile */
+    }
+    
+    .btn-login {
+        width: 80%; /* Aumenta a largura do botão no mobile */
+        margin-top: 110px; /* Ajusta o espaçamento superior no mobile */
+    }
+}
+
+/* Container de administração com estilização básica */
+.admin {
+    padding: 20px; /* Espaçamento interno */
+    background-color: var(--cinza-escuro); /* Fundo escuro */
+    color: var(--branco); /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+}
+
+.admin h2 {
+    font-size: 28px; /* Tamanho do subtítulo */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+/* Estilização da tabela */
+table {
+    width: 100%; /* Largura completa */
+    margin-top: 20px; /* Espaçamento superior */
+    border-collapse: collapse; /* Remove espaços entre bordas */
+    background-color: rgb(18, 18, 18); /* Fundo da tabela */
+    border-radius: 8px; /* Bordas arredondadas */
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+table thead {
+    background-color: var(--rosa-escuro); /* Fundo dos cabeçalhos */
+    color: var(--branco); /* Cor do texto dos cabeçalhos */
+}
+
+table th, table td {
+    padding: 15px; /* Espaçamento interno das células */
+    text-align: center; /* Alinhamento centralizado */
+    font-size: 16px; /* Tamanho do texto */
+}
+
+/* Estilo de alternância para as linhas pares da tabela */
+table tbody tr:nth-child(even) {
+    background-color: var(--cinza-escuro); /* Fundo alternado para linhas pares */
+}
+
+table tbody tr:hover {
+    background-color: var(--rosa-claro); /* Fundo no hover */
+    color: var(--cinza-escuro); /* Cor do texto no hover */
+}
+
+/* Botões na tabela com estilização de altura e margem */
+table td button {
+    display: inline-block;
+    text-align: center;
+}
+
+button.edit-btn, button.delete-btn {
+    padding: 8px 15px; /* Define o espaçamento interno */
+    border: none; /* Remove a borda padrão */
+    background-color: transparent; /* Fundo transparente */
+    color: var(--branco); /* Cor do texto */
+    cursor: pointer; /* Aparência de botão clicável */
+    font-size: 14px; /* Tamanho do texto */
+    margin: 30px 5px 0 5px; /* Define a margem em torno do botão */
+    border-radius: 5px; /* Bordas arredondadas */
+    position: relative; /* Define a posição relativa */
+    z-index: 10; /* Nível de camada do botão */
+}
+
+button.edit-btn {
+    background-color: var(--cinza-claro); /* Fundo para o botão de edição */
+}
+
+button.delete-btn {
+    background-color: var(--rosa-escuro); /* Fundo para o botão de exclusão */
+}
+
+button:hover {
+    opacity: 0.8; /* Reduz a opacidade no hover */
+}
+
+/* Responsividade para a página de administração */
+@media (max-width: 768px) {
+    .admin h2 {
+        font-size: 24px; /* Ajusta o tamanho do título em telas menores */
+    }
+
+    table, th, td {
+        font-size: 14px; /* Reduz o tamanho do texto */
+    }
+
+    table th, table td {
+        padding: 10px; /* Diminui o espaçamento interno das células */
+    }
+
+    /* Adaptação dos botões para telas menores */
+    button.edit-btn, button.delete-btn {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Exibe cada célula em bloco, uma abaixo da outra */
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+
+    /* Remove o fundo de linha para o modo empilhado */
+    table tbody tr {
+        background-color: transparent;
+    }
+
+    table td {
+        text-align: right;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    /* Insere o rótulo da coluna antes de cada célula */
+    table td::before {
+        content: attr(data-label); /* Pega o conteúdo do atributo data-label */
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
 }

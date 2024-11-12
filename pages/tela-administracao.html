@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Definindo a codificação de caracteres para UTF-8 -->
+    <meta charset="UTF-8">
+    
+    <!-- Ajusta o layout para se adaptar ao tamanho da tela do dispositivo -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título da página, que aparece na aba do navegador -->
+    <title>XP News - Administração</title>
+    
+    <!-- Importando o arquivo de estilos CSS para estilização da página -->
+    <link rel="stylesheet" href="../css/styles.css">
+    
+    <!-- FontAwesome para uso de ícones na página -->
+    <script src="https://kit.fontawesome.com/a3668444f2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Cabeçalho da página, contendo a logo e o menu -->
+    <header>
+        <div class="container">
+            
+            <!-- Logo que leva o usuário de volta para a página inicial -->
+            <nav class="logo">
+                <a href="index.html">
+                    <img src="../assets/images/icone-principal-cortada.PNG" alt="Logo XP News">
+                </a>
+            </nav>
+            
+            <!-- Menu principal com links para diferentes sessões do site -->
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="#">Sessão 1</a></li>
+                        <li><a href="#">Sessão 2</a></li>
+                        <li><a href="#">Sessão 3</a></li>
+                        <li><a href="links.html" target="_blank">Atividades</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <!-- Botão de login com ícone, direciona para a tela de login -->
+            <div class="login">
+                <a href="tela-login.html">
+                    <button><i class="fa-solid fa-right-to-bracket"></i></button>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Corpo principal da página -->
+    <main>
+        <!-- Seção de administração de usuários -->
+        <section class="admin">
+            <!-- Título da seção -->
+            <h2>Administração - Gerenciamento de Usuários</h2>
+            
+            <!-- Tabela para listar usuários e suas informações -->
+            <table>
+                <thead>
+                    <!-- Cabeçalho da tabela com os títulos das colunas -->
+                    <tr>
+                        <th>Nome Completo</th>
+                        <th>Email</th>
+                        <th>Username</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Exemplo de linha de usuário com botões para editar e excluir -->
+                    <tr>
+                        <td>João Silva</td>
+                        <td>joao.silva@example.com</td>
+                        <td>joao123</td>
+                        <td>
+                            <button class="edit-btn">Editar</button>
+                            <button class="delete-btn">Excluir</button>
+                        </td>
+                    </tr>
+                    <!-- Outras linhas de usuários com as mesmas colunas -->
+                    <tr>
+                        <td>Ana Souza</td>
+                        <td>ana.souza@example.com</td>
+                        <td>ana_souza</td>
+                        <td>
+                            <button class="edit-btn">Editar</button>
+                            <button class="delete-btn">Excluir</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Maria Oliveira</td>
+                        <td>maria.oliveira@example.com</td>
+                        <td>maria_oliveira</td>
+                        <td>
+                            <button class="edit-btn">Editar</button>
+                            <button class="delete-btn">Excluir</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Carlos Pereira</td>
+                        <td>carlos.pereira@example.com</td>
+                        <td>carlosP</td>
+                        <td>
+                            <button class="edit-btn">Editar</button>
+                            <button class="delete-btn">Excluir</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Fernanda Lima</td>
+                        <td>fernanda.lima@example.com</td>
+                        <td>fernanda.lima</td>
+                        <td>
+                            <button class="edit-btn">Editar</button>
+                            <button class="delete-btn">Excluir</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Rodapé da página com informações adicionais e links -->
+    <footer>
+        <!-- Copyright e nome do site -->
+        <p>&copy; 2024 XP News</p>
+        
+        <!-- Menu do rodapé com links para páginas informativas -->
+        <nav>
+            <ul>
+                <li><a href="#">Sobre nós</a></li>
+                <li><a href="#">Política de Privacidade</a></li>
+                <li><a href="#">Termos de Uso</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+</html>

@@ -1,38 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <!-- Ícone da página que aparece na aba do navegador -->
     <link rel="icon" href="/assets/icons/faviconxp.jpg" type="image/jpg">
+    
+    <!-- Definindo a codificação de caracteres para UTF-8 -->
     <meta charset="UTF-8">
+    
+    <!-- Ajusta o layout para se adaptar ao tamanho da tela do dispositivo -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título da página, que aparece na aba do navegador -->
     <title>Login - XP News</title>
+    
+    <!-- Importando o arquivo de estilos CSS para estilização da página -->
     <link rel="stylesheet" href="../css/styles.css">
+    
+    <!-- Importando o Font Awesome para usar ícones -->
     <script src="https://kit.fontawesome.com/a3668444f2.js" crossorigin="anonymous"></script>
+    
+    <!-- Fonte Roboto, usada para o texto da página -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body class="login-page">
 
-    <!-- Container de Login -->
+    <!-- Container principal para a seção de login -->
     <div class="login-container">
+        <!-- Título da seção de login -->
         <h1>Entrar</h1>
-        <form>
+        
+        <!-- Formulário de login -->
+        <form action="tela-administracao.html" method="POST">
+            <!-- Campo de entrada para o email do usuário -->
             <label for="email">Email</label>
             <input type="email" id="email" name="email" placeholder="Digite seu email" required>
             
+            <!-- Campo de entrada para a senha do usuário -->
             <label for="password">Senha</label>
             <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
             
+            <!-- Checkbox para lembrar a senha -->
             <div class="remember">
                 <input type="checkbox" id="remember" name="remember">
                 <label for="remember">Lembrar senha</label>
             </div>
             
-            <button type="submit" class="btn-login">Entrar</button>
+            <!-- Botão de login -->
+                <button type="submit" class="btn-login">Entrar</button>
             
+            <!-- Link para a página de criação de conta -->
             <div class="register">
                 <p>Não tem uma conta? <a href="#">criar conta</a></p>
             </div>
         </form>
     </div>
-
 </body>
 </html>
