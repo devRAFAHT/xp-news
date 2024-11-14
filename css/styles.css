@@ -284,53 +284,41 @@ footer nav a:hover {
     color: var(--rosa-claro); /* Cor dos links ao passar o mouse */
 }
 
-/* Media Query para telas pequenas */
-@media (max-width: 600px) {
-    footer nav ul {
-        flex-direction: column; /* Alinha os links verticalmente em telas pequenas */
-    }
-
-    footer nav ul li {
-        margin-right: 0; /* Remove a margem direita em telas pequenas */
-        margin-bottom: 15px; /* Aumenta o espaço entre os links */
-    }
-}
-
+/* Centraliza o corpo da página */
 body.login-page {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh; /* Garantir que o corpo ocupe toda a altura da tela */
     background-color: var(--cinza-escuro); /* Define o fundo da página de login */
     color: var(--branco); /* Define a cor do texto */
+    margin: 0; /* Remove a margem padrão do body */
 }
 
 /* Container da tela de login com estilização e centralização */
 .login-container {
     background-color: var(--cinza-escuro); /* Fundo do container de login */
     color: var(--branco); /* Cor do texto no container */
-    max-width: 400px; /* Define a largura máxima do container */
-    margin: 100px auto; /* Centraliza vertical e horizontalmente */
+    width: 90%; /* Largura dinâmica (90% da tela) */
+    max-width: 600px; /* Define a largura máxima do container */
+    margin: 20px; /* Margem para evitar que o container toque as bordas da tela */
     padding: 30px; /* Espaçamento interno */
     border-radius: 8px; /* Arredondamento das bordas */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Efeito de sombra */
-    text-align: center; /* Centraliza o texto */
-    width: 400px; /* Largura fixa do container */
+    text-align: left; /* Centraliza o texto */
 }
 
+/* Estilo do título */
 .login-container h1 {
     font-size: 32px; /* Tamanho do título */
     margin-bottom: 20px; /* Espaçamento inferior do título */
     color: var(--branco);
+    text-align: center;
 }
 
-.login-container label {
-    display: block;
-    text-align: left; /* Alinha os rótulos à esquerda */
-    font-size: 14px; /* Tamanho do texto dos rótulos */
-    margin-bottom: 5px; /* Espaçamento inferior */
-}
 
-/* Estilos dos campos de entrada de e-mail e senha */
+
+/* Estilo dos campos de entrada */
 .login-container input[type="email"],
 .login-container input[type="password"] {
     width: 100%; /* Largura completa do campo */
@@ -343,21 +331,9 @@ body.login-page {
     font-size: 16px; /* Tamanho do texto nos campos */
 }
 
-.login-container .remember {
-    display: flex; /* Exibe os elementos em linha */
-    align-items: center; /* Alinha os itens verticalmente */
-    margin-bottom: 20px; /* Espaçamento inferior */
-}
-
-.login-container .remember label {
-    margin-left: 8px; /* Espaçamento entre o checkbox e o texto */
-    font-size: 14px;
-    color: var(--cinza-claro); /* Cor do texto auxiliar */
-}
-
-/* Estilização do botão de login */
+/* Estilo do botão de login */
 .btn-login {
-    width: 25%; /* Define a largura do botão */
+    width: 50%; /* Largura do botão em relação ao container de login */
     padding: 12px; /* Espaçamento interno do botão */
     border: none; /* Remove a borda padrão */
     border-radius: 4px; /* Bordas arredondadas */
@@ -368,8 +344,7 @@ body.login-page {
     transition: background 0.3s ease; /* Animação suave no hover */
     display: block; /* Exibe o botão como bloco */
     margin: 0 auto; /* Centraliza o botão */
-    text-align: center;
-    margin-top: 90px; /* Espaçamento superior do botão */
+    margin-top: 40px; /* Ajuste o espaçamento superior do botão */
 }
 
 .btn-login:hover {
@@ -379,7 +354,8 @@ body.login-page {
 /* Texto com link para registro abaixo do botão de login */
 .register {
     margin-top: 65px; /* Espaçamento acima do texto */
-    font-size: 14px; /* Tamanho do texto */
+    font-size: 16px; /* Tamanho do texto */
+    text-align: center;
 }
 
 .register a {
@@ -391,19 +367,76 @@ body.login-page {
     color: var(--rosa-escuro); /* Altera a cor do link no hover */
 }
 
-/* Ajustes para telas menores (responsivo) */
+/* Ajustes para telas de celular (até 600px de largura) */
 @media (max-width: 600px) {
     .login-container {
+        width: 100%; /* Largura do container no mobile ajustada para 90% da tela */
         padding: 20px; /* Reduz o espaçamento interno no mobile */
+        max-width: 400px;
     }
-    
+
     .login-container h1 {
         font-size: 20px; /* Reduz o tamanho do título no mobile */
     }
-    
+
     .btn-login {
         width: 80%; /* Aumenta a largura do botão no mobile */
-        margin-top: 110px; /* Ajusta o espaçamento superior no mobile */
+        max-width: 360px;
+        margin-top: 95px; /* Ajusta o espaçamento superior no mobile */
+    }
+}
+
+/* Ajustes para telas de desktop (de 601px a 1200px de largura) */
+@media (min-width: 601px) and (max-width: 1200px) {
+    .login-container {
+        width: 100%; /* Ajusta a largura do container para desktop */
+        max-width: 400px; /* Limita a largura máxima a 500px em telas de desktop */
+        padding: 25px; /* Aumenta o espaçamento interno para desktops */
+    }
+
+    .login-container h1 {
+        font-size: 28px; /* Reduz um pouco o tamanho do título para desktop */
+    }
+
+    .btn-login {
+        width: 350px; /* Largura do botão um pouco maior para desktops */
+        margin-top: 100px; /* Ajusta o espaçamento superior para desktop */
+    }
+}
+
+/* Ajustes para monitores ultrawide (acima de 1200px de largura) */
+@media (min-width: 1201px) and (max-width: 1920px) {
+    .login-container {
+        width: 60%; /* Ajusta a largura do container para monitores ultrawide */
+        max-width: 400px; /* Limita a largura máxima do container para monitores grandes */
+        padding: 35px; /* Espaçamento maior para monitores */
+    }
+
+    .login-container h1 {
+        font-size: 32px; /* Tamanho do título ajustado */
+    }
+
+    .btn-login {
+        width: 330px; /* Largura do botão no padrão */
+        margin-top: 100px; /* Ajuste do espaçamento para manter alinhado */
+    }
+}
+
+/* Ajustes para TVs ou monitores muito grandes (acima de 1920px) */
+@media (min-width: 1921px) {
+    .login-container {
+        width: 50%; /* Ajusta a largura para telas muito grandes */
+        max-width: 800px; /* Limita a largura máxima do container em TVs grandes */
+        padding: 40px; /* Maior espaçamento interno para telas grandes */
+    }
+
+    .login-container h1 {
+        font-size: 36px; /* Aumenta o tamanho do título em TVs grandes */
+    }
+
+    .btn-login {
+        width: 720px; /* Ajusta o tamanho do botão para telas grandes */
+        margin-top: 100px; /* Ajuste o espaçamento para que o layout fique centrado */
     }
 }
 
