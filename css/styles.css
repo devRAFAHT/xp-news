@@ -114,7 +114,8 @@ header {
 }
 
 .login button:hover {
-    background: linear-gradient(to bottom right, var(--rosa-escuro), var(--rosa-claro)); /* Efeito de hover no botão */
+    background: linear-gradient(to bottom right, var(--rosa-escuro), var(--rosa-claro));
+    color: var(--branco);
 }
 
 .login button i {

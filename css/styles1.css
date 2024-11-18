@@ -1,0 +1,132 @@
+:root {
+    --rosa-claro: rgb(248, 7, 89);
+    --rosa-escuro: rgb(170, 9, 63);
+    --cinza-escuro: rgb(14, 14, 14);
+    --cinza-claro: rgb(100, 100, 100);
+    --branco: rgb(255, 255, 255);
+}
+
+body {
+    background-color: var(--cinza-escuro);
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+    background-color: var(--cinza-escuro);
+}
+
+.navbar-brand img {
+    width: 50px;
+    height: auto;
+}
+
+.nav-link {
+    color: var(--cinza-claro) !important;
+}
+
+.nav-link:hover {
+    color: var(--branco) !important;
+}
+
+.login-btn {
+    color: var(--branco);
+    width: 100px;
+    height: 40px;
+    background: linear-gradient(to bottom right, var(--rosa-claro), var(--rosa-escuro));
+    border: none;
+    border-radius: 20px;
+    padding: 5px 20px;
+}
+
+.login-btn:hover {
+    background: linear-gradient(to bottom right, var(--rosa-escuro), var(--rosa-claro));
+}
+
+/* Estilo para os links do menu */
+.nav-link {
+    position: relative; /* Necessário para posicionar o ::after */
+    text-decoration: none; /* Remove o sublinhado padrão */
+    color: var(--cinza-claro);
+    font-size: 18px;
+}
+
+/* Efeito visual para os links no hover */
+.nav-link::after {
+    content: " ";
+    width: 0px; /* Inicia com a linha invisível */
+    height: 4px;
+    background-image: linear-gradient(45deg, var(--rosa-escuro), var(--rosa-claro)); /* Linha gradiente */
+    position: absolute;
+    bottom: -4px; /* Posiciona a linha abaixo do texto */
+    left: 0px;
+    transition: width 0.5s; /* Animação da linha */
+}
+
+.nav-link:hover::after {
+    width: 100%; /* Linha se expandindo ao passar o mouse */
+}
+
+.nav-link:hover {
+    color: var(--branco); /* Altera a cor do texto no hover */
+}
+
+.noticias{
+    padding: 20px;
+}
+
+.scrollable {
+    width: 100%; /* Garante que a largura da seção ocupe toda a área disponível */
+    overflow-x: auto; /* Adiciona o scroll horizontal */
+    -webkit-overflow-scrolling: touch; /* Suaviza o scroll em dispositivos móveis */
+}
+
+.cards-container {
+    display: flex; /* Usando flexbox para os cards ficarem na horizontal */
+    gap: 20px; /* Espaçamento entre os cards */
+}
+
+.card {
+    flex: 0 0 auto; /* Impede que os cards se expandam além da largura definida */
+    background-color: var(--cinza-claro);
+}
+
+.card-body {
+    max-height: 150px; /* Limita a altura do conteúdo do card */
+    overflow-y: auto;  /* Permite scroll vertical dentro do card, se necessário */
+}
+
+
+.custom-card-img {
+    border: 10px solid #444; /* Borda entre a imagem e o conteúdo */
+    border-radius: 20px;
+    border-color: var(--cinza-claro);
+}
+
+.card-footer {
+    color: var(--cinza-claro);
+    background-color: var(--cinza-escuro);
+    border: 10px solid var(--cinza-claro); 
+    padding: 15px;
+}
+
+.card:hover {
+    transform: scale(0.98); /* Efeito de zoom nas notícias */
+    border-radius: 0;
+}
+
+footer{
+    background-color: var(--cinza-escuro);
+}
+
+footer a{
+    color: var(--branco);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--rosa-escuro);
+    text-decoration: none; /* Adiciona sublinhado ao passar o mouse */
+}
+
+
+
