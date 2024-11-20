@@ -185,10 +185,14 @@ a:hover {
 .table th{
     background-color: var(--rosa-escuro);
     color: var(--branco);
+    border: none;
+    text-align: center;
 }
 
 .table td{
     background-color: var(--cinza-escuro);
+    border: none;
+    text-align: center;
 }
 
 /* Aumentar a altura das linhas */

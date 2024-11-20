@@ -10,49 +10,54 @@
     <!-- Ajusta o layout para se adaptar ao tamanho da tela do dispositivo -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Título da página, que aparece na aba do navegador -->
+    <!-- Título da página -->
     <title>Login - XP News</title>
     
-    <!-- Importando o arquivo de estilos CSS para estilização da página -->
-    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <!-- Importando o Font Awesome para usar ícones -->
+    <!-- Arquivo CSS -->
+    <link rel="stylesheet" href="../css/styles1.css">
+    
+    <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/a3668444f2.js" crossorigin="anonymous"></script>
     
-    <!-- Fonte Roboto, usada para o texto da página -->
+    <!-- Fonte Roboto -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body class="login-page">
-
-    <!-- Container principal para a seção de login -->
-    <div class="login-container">
-        <!-- Título da seção de login -->
-        <h1>Entrar</h1>
-        
-        <!-- Formulário de login -->
-        <form action="tela-administracao.html">
-            <!-- Campo de entrada para o email do usuário -->
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Digite seu email" required>
-            
-            <!-- Campo de entrada para a senha do usuário -->
-            <label for="password">Senha</label>
-            <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
-            
-            <!-- Checkbox para lembrar a senha -->
-            <div class="remember">
-                <input type="checkbox" id="remember" name="remember">
-                <label for="remember">Lembrar senha</label>
-            </div>
-            
-            <!-- Botão de login -->
-            <button type="submit" class="btn-login">Entrar</button>
-            
-            <!-- Link para a página de criação de conta -->
-            <div class="register">
-                <p>Não tem uma conta? <a href="#">criar conta</a></p>
-            </div>
-        </form>
+<body>
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="login-container col-12 col-sm-8 col-md-6 col-lg-4">
+            <h1 class="text-center mb-4">Entrar</h1>
+            <form action="tela-administracao.html">
+                <!-- Email -->
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Digite seu email" required>
+                </div>
+                <!-- Senha -->
+                <div class="mb-3">
+                    <label for="password" class="form-label">Senha</label>
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Digite sua senha" required>
+                </div>
+                <!-- Checkbox -->
+                <div class="form-check mb-3">
+                    <input type="checkbox" id="remember" name="remember" class="form-check-input">
+                    <label for="remember" class="form-check-label">Lembrar senha</label>
+                </div>
+                <!-- Botão -->
+                <div class="text-center">
+                    <button type="submit" class="btn btn-login w-100">Entrar</button>
+                </div>
+                <!-- Registro -->
+                <div class="text-center mt-4">
+                    <p>Não tem uma conta? <a href="#">criar conta</a></p>
+                </div>
+            </form>
+        </div>
     </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
