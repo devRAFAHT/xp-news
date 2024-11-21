@@ -1,4 +1,5 @@
 :root {
+    /* Definição das cores utilizadas no tema */
     --rosa-claro: rgb(248, 7, 89);
     --rosa-escuro: rgb(170, 9, 63);
     --cinza-escuro: rgb(14, 14, 14);
@@ -7,28 +8,34 @@
 }
 
 body {
+    /* Cor de fundo e fonte padrão para o corpo da página */
     background-color: var(--cinza-escuro);
     font-family: 'Roboto', sans-serif;
 }
 
 .navbar {
+    /* Fundo da barra de navegação */
     background-color: var(--cinza-escuro);
 }
 
 .navbar-brand img {
+    /* Ajusta o tamanho do logotipo no menu */
     width: 50px;
     height: auto;
 }
 
 .nav-link {
+    /* Cor e estilo padrão dos links no menu */
     color: var(--cinza-claro) !important;
 }
 
 .nav-link:hover {
+    /* Alteração de cor dos links no menu ao passar o mouse */
     color: var(--branco) !important;
 }
 
 .login-btn {
+    /* Estilo do botão de login na barra de navegação */
     color: var(--branco);
     width: 100px;
     height: 40px;
@@ -39,163 +46,171 @@ body {
 }
 
 .login-btn:hover {
+    /* Efeito de hover no botão de login */
     background: linear-gradient(to bottom right, var(--rosa-escuro), var(--rosa-claro));
 }
 
-/* Estilo para os links do menu */
+/* Estilo dos links do menu */
 .nav-link {
-    position: relative; /* Necessário para posicionar o ::after */
-    text-decoration: none; /* Remove o sublinhado padrão */
+    position: relative;
+    text-decoration: none;
     color: var(--cinza-claro);
     font-size: 18px;
 }
 
-/* Efeito visual para os links no hover */
+/* Efeito de destaque nos links do menu ao passar o mouse */
 .nav-link::after {
     content: " ";
-    width: 0px; /* Inicia com a linha invisível */
+    width: 0px;
     height: 4px;
-    background-image: linear-gradient(45deg, var(--rosa-escuro), var(--rosa-claro)); /* Linha gradiente */
+    background-image: linear-gradient(45deg, var(--rosa-escuro), var(--rosa-claro));
     position: absolute;
-    bottom: -4px; /* Posiciona a linha abaixo do texto */
+    bottom: -4px;
     left: 0px;
-    transition: width 0.5s; /* Animação da linha */
+    transition: width 0.5s;
 }
 
 .nav-link:hover::after {
-    width: 100%; /* Linha se expandindo ao passar o mouse */
+    /* Expansão da linha decorativa ao passar o mouse */
+    width: 100%;
 }
 
-.nav-link:hover {
-    color: var(--branco); /* Altera a cor do texto no hover */
-}
-
-.noticias{
+.noticias {
+    /* Espaçamento interno para a seção de notícias */
     padding: 20px;
 }
 
 .scrollable {
-    width: 100%; /* Garante que a largura da seção ocupe toda a área disponível */
-    overflow-x: auto; /* Adiciona o scroll horizontal */
-    -webkit-overflow-scrolling: touch; /* Suaviza o scroll em dispositivos móveis */
+    /* Adiciona rolagem horizontal para contêineres maiores */
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .cards-container {
-    display: flex; /* Usando flexbox para os cards ficarem na horizontal */
-    gap: 20px; /* Espaçamento entre os cards */
+    /* Estilo de layout horizontal para os cards */
+    display: flex;
+    gap: 20px;
 }
 
 .card {
-    flex: 0 0 auto; /* Impede que os cards se expandam além da largura definida */
+    /* Configuração dos cards individuais */
+    flex: 0 0 auto;
     background-color: var(--cinza-claro);
 }
 
 .card-body {
-    max-height: 150px; /* Limita a altura do conteúdo do card */
-    overflow-y: auto;  /* Permite scroll vertical dentro do card, se necessário */
+    /* Limita a altura do conteúdo dos cards e adiciona rolagem, se necessário */
+    max-height: 150px;
+    overflow-y: auto;
 }
 
-
 .custom-card-img {
-    border: 10px solid #444; /* Borda entre a imagem e o conteúdo */
+    /* Estilo para imagens nos cards */
+    border: 10px solid var(--cinza-claro);
     border-radius: 20px;
     border-color: var(--cinza-claro);
 }
 
 .card-footer {
+    /* Estilo do rodapé dos cards */
     color: var(--cinza-claro);
     background-color: var(--cinza-escuro);
-    border: 10px solid var(--cinza-claro); 
+    border: 10px solid var(--cinza-claro);
     padding: 15px;
 }
 
 .card:hover {
-    transform: scale(0.98); /* Efeito de zoom nas notícias */
+    /* Efeito de zoom nos cards ao passar o mouse */
+    transform: scale(0.98);
     border-radius: 0;
 }
 
-footer{
+footer {
+    /* Estilo do rodapé */
     background-color: var(--cinza-escuro);
 }
 
-footer a{
+footer a {
+    /* Estilo dos links no rodapé */
     color: var(--branco);
     text-decoration: none;
 }
 
 footer a:hover {
+    /* Efeito de hover nos links do rodapé */
     color: var(--rosa-escuro);
-    text-decoration: none; /* Adiciona sublinhado ao passar o mouse */
-}
-
-/* Corpo da página */
-body {
-    background-color: #0e0e0e; /* Cinza bem escuro */
-    color: #fff; /* Branco */
-    font-family: 'Roboto', sans-serif;
-    height: 100vh;
+    text-decoration: none;
 }
 
 .login-container {
-    background-color: #0e0e0e; /* Fundo do container */
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra */
-    padding: 30px; /* Espaçamento interno */
-    width: 100%; /* Ajuste aqui para largura relativa */
-    max-width: 500px; /* Aumente este valor para maior largura */
+    /* Estilo do contêiner da tela de login */
+    background-color: var(--cinza-escuro);
+    color: var(--branco);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
 }
 
 .form-control {
-    background-color: #2c2c2c; /* Cor de fundo dos campos */
-    color: var(--branco); /* Cor do texto */
-    border: 1px solid var(--cinza-claro); /* Borda */
+    /* Estilo dos campos de formulário */
+    background-color: #2c2c2c;
+    color: var(--branco);
+    border: 1px solid var(--cinza-claro);
 }
 
 .form-control::placeholder {
-    color: var(--cinza-claro)
+    /* Estilo do placeholder nos campos de formulário */
+    color: var(--cinza-claro);
 }
 
 .form-control:focus {
-    background-color: #2c2c2c; /* Cor ao clicar no campo */
-    color: #fff; /* Texto ao focar */
+    /* Estilo dos campos de formulário ao receber foco */
+    background-color: #2c2c2c;
+    color: var(--branco);
     border-color: var(--branco);
-    box-shadow: none
+    box-shadow: none;
 }
 
 /* Botão de Login */
 .btn-login {
-    background: linear-gradient(to bottom right, rgb(248, 7, 49), rgb(170, 9, 63));
-    color: #fff;
+    background: linear-gradient(to bottom right, var(--rosa-escuro), var(--rosa-claro));
+    color: var(--branco);
     border: none;
 }
 
 .btn-login:hover {
-    background: linear-gradient(to bottom right, rgb(170, 9, 63), rgb(248, 7, 49));
+    /* Efeito de hover no botão de login */
+    background: linear-gradient(to bottom right, var(--rosa-claro), var(--rosa-escuro));
 }
 
-/* Links */
+/* Links gerais */
 a {
-    color: rgb(248, 7, 49);
+    color: var(--rosa-escuro);
 }
 
 a:hover {
-    color: rgb(170, 9, 63);
+    color: var(--rosa-claro);
 }
 
-.table th{
+.table th {
+    /* Estilo para cabeçalhos das tabelas */
     background-color: var(--rosa-escuro);
     color: var(--branco);
     border: none;
     text-align: center;
 }
 
-.table td{
+.table td {
+    /* Estilo para células das tabelas */
     background-color: var(--cinza-escuro);
     border: none;
     text-align: center;
 }
 
-/* Aumentar a altura das linhas */
+/* Ajuste de altura das linhas da tabela */
 .table th, .table td {
-    padding: 30px 40px; /* Ajuste o valor conforme necessário */
+    padding: 30px 40px;
 }
